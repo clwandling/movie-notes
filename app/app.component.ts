@@ -6,7 +6,7 @@ import {VideoListComponent} from './video-list.component';
     selector: 'my-app',
     template: `
                 <h1 class="jumbotron">{{title}}</h1>
-                <video-list [videos]="videos"></video-list>
+                <video-list [videos]="videos" (videoSelected)="videoSelected($event)"></video-list>
                `,
     directives: [VideoListComponent]
 })
@@ -20,5 +20,8 @@ export class AppComponent {
             new Video("bbb", "bbb", "bbb")
         ]
     }
-}
 
+    videoSelected(video : Video) {
+        console.log(video);
+    }
+}

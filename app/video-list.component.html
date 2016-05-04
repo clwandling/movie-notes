@@ -4,7 +4,7 @@
         <tr><th>Name</th></tr>
     </thead>
     <tbody>
-        <tr *ngFor="let video of videos" (click)="videoSelected(video)">
+        <tr *ngFor="let video of videos" (click)="videoClicked(video)">
             <td>{{video.name}}</td>
         </tr>
     </tbody>
