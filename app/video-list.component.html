@@ -1,0 +1,11 @@
+<b>Videos</b>
+<table class="table">
+    <thead>
+        <tr><th>Name</th></tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let video of videos" (click)="videoSelected(video)">
+            <td>{{video.name}}</td>
+        </tr>
+    </tbody>
+</table>
